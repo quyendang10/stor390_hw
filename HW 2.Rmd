@@ -1,7 +1,7 @@
 ---
 title: "HW 2 Student"
 author: "Quyen Dang"
-date: "10/17/2023"
+date: "9/26/2024"
 output: 
   html_document:
     number_sections: true
@@ -61,7 +61,7 @@ acc
 Discuss your results.  If you have done this correctly, you should have a classification error rate that is roughly 20% higher than what we observed in class.  Why is this the case? In particular run a summary of the `iris_test_category` as well as `iris_target_category` and discuss how this plays a role in your answer.  
 
 *STUDENT INPUT* 
-The training set has 45 setosa, 14 versicolor, and 41 virginica, while the test set has 5 setosa, 36 versicolor, and 9 virginica. This imbalance, especially the underrepresentation of versicolor in the training set (14) compared to its dominance in the test set (36), leads to higher misclassification of versicolor. The same applies for setosa and virginica, with high representation in the training set and little representation in the test set. As a result, the error rate is 22%, higher than the more balanced dataset we observed in class.
+Looking at the results, the classifier correctly identified all setosa instances (5/5). For versicolor, 25 were correctly classified, but 11 virginica instances were misclassified as versicolor. For virginica, 9 were correctly classified. The KNN classifier resulted in an accuracy of approximately 78%, with a classification error rate of 22%. The training set has 45 setosa, 14 versicolor, and 41 virginica, while the test set has 5 setosa, 36 versicolor, and 9 virginica. This imbalance, especially the underrepresentation of versicolor in the training set (14) compared to its dominance in the test set (36), leads to higher misclassification of versicolor. The same applies for setosa and virginica, with high representation in the training set and little representation in the test set. As a result, the error rate is 22%, higher than the more balanced dataset we observed in class.
 
 ```{r}
 # Summarize the iris_test_category and iris_target_category
